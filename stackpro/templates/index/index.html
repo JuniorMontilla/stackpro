@@ -1,0 +1,19 @@
+{%  extends 'base.html' %}
+{% block title %}{%  endblock %}
+{%  block content %}
+<h1>Stackpro</h1>
+	{{message}}
+	 <hr/>
+{% if latest_advert_list  %}	 
+	{% for elements in latest_advert_list %}
+		 <strong><a href="/employee/details/{{elements.id}}">{{elements.titlefoemployee}}</a></strong> ({{elements.company}}) | {{elements.place}}<br/>
+		 <hr/>
+	{% endfor %}
+	<br/><br/>
+	<a class="btn-public" href='{% url "url_work" %}'><i class="icon-bullhorn"></i> Publicar empleo</a>
+{% else %}
+ 	<h2>No hay anuncios hasta el momento :(</h2>
+ 	<br/>
+ 	<a class="btn-public" href='{% url "url_work" %}'><i class="icon-bullhorn"></i> Publicar empleo</a>
+{% endif %}	
+{% endblock %}

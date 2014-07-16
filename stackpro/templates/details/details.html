@@ -1,0 +1,26 @@
+{%  extends 'base.html' %}
+{% block title %}{%  endblock %}
+{%  block content %}
+{{advert}}
+<article class="company-info">
+	<h1>{{advert.titlefoemployee}}</h1>
+	<img src="/media/{{advert.avatar}}" alt="" width="200px" height="200px">
+	<h3>{{advert.company}}</h3>
+	<a href="{{advert.website }}">{{advert.website }}</a>
+</article>
+<h3 class="headers"> Lugar y Beneficios </h3>
+<article class="place">{{advert.place }} <i class="icon-location"></i></article>
+<article class="money">US${{advert.salary }} <i class="icon-coin"></i></article>
+<br/><br/>
+<h3 class="headers"> Detalles del empleo </h3>
+<article class =  >{{advert.descriptionofjob | safe}}</article>
+<h3 class="headers"> Prueba </h3>
+<article class =  >{{advert.prove | safe }}</article>
+<form action="."  method="POST">
+{% csrf_token %}
+<input type="text" name="links" placeholder="Elace a github o bitbucket">
+<input type="text" name="email" placeholder="Email">
+<button  type="submit">Enviar</button>
+</form>
+{{message}}
+{% endblock %}
