@@ -1,13 +1,13 @@
 body{
 	font-family: 'Open Sans', sans-serif;
+	font-size:  16px;
+	margin: 0px;
 }
 
-h1{
-	font-size:  2.5em;
-}
 
 img{
-	border-radius: 50%;
+	/*border-radius: 50%;*/
+
 }
 
 input[type=*]{
@@ -40,10 +40,12 @@ button{
 	background: #3079ed;
 	width:  15em;
 	height:  3em;
-	color: #fff;
+	color: #000;
 	border-radius:  5px;
 	display:  block;
 	margin: 1em;
+	text-transform: uppercase;
+	font-weight: bold;
 
 
 }
@@ -53,6 +55,16 @@ article{
 	padding: 1em;
 	margin-top:  1em;
 }
+
+section{
+	margin-top: 3em;
+}
+
+figure{
+	margin: 1em;
+	margin-top: 0px;
+}
+
 a{
   text-decoration: none;
   color: #000;		
@@ -62,14 +74,33 @@ a:hover{
 	text-decoration: underline;
 }
 
-
-
-
 .errorlist{
 	color: red;
 	list-style:  none;
 }
 
+.header{
+	width: 100%;
+	background: #fff; 
+	padding: 0.001em;
+	margin: 0px;
+	text-align: right;
+	border-bottom: 2px solid #0000ff;
+	text-transform:  uppercase;
+	font-weight:  bold;
+}
+
+.list{
+	list-style:  none;
+	margin-top: 1em;
+}
+
+.item{
+	display:  inline-block;
+	margin:  1em;
+	margin-top: 1em;
+
+}
 
 .money{
 	background: #234f32;
@@ -96,10 +127,23 @@ a:hover{
 	
 }
 
+
+.link-to-work{
+	margin: 1em;
+
+}
+
+.not-work{
+	margin: 1em;
+}
+
 .btn-public{
 	 background: #3079ed;
 	 padding: 1em;
-	 color: #fff;
+	 color: #000;
+	 margin: 1em;
+	 text-transform:  uppercase;
+	 font-weight:  bold;
 }
 
 .headers{
@@ -111,6 +155,17 @@ a:hover{
 }
 
 
+/*ocss class*/
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+/*web fonts*/
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/fonts/icomoon.eot?n2ocnu');

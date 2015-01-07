@@ -26,8 +26,8 @@ def view_work(request):
 			advertobject.titlefoemployee = titlefoemployee
 			advertobject.place = place
 			advertobject.salary = salary
-			advertobject.prove = prove
 			advertobject.descriptionofjob = descriptionofjob
+			advertobject.prove = prove
 		 	advertobject.save()
 			return HttpResponseRedirect('/')	 	
 		message = 'error, vuelva a intentarlo'

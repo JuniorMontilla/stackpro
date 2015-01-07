@@ -7,7 +7,7 @@ class advert(models.Model):
 		return mediaroute 
 
 	status      	 = models.BooleanField() 
-	avatar      	 = models.ImageField(upload_to=avatarcompany, null=True,blank=True)
+	avatar      	 = models.ImageField(upload_to=avatarcompany, null=False,blank=False)
 	company     	 = models.CharField(max_length=100)
 	website     	 = models.CharField(max_length=100)
 	titlefoemployee  = models.CharField(max_length=200) 
@@ -20,7 +20,7 @@ class advert(models.Model):
 class answer(models.Model):
 	links      = models.CharField(max_length=200)
 	email      = models.CharField(max_length=50)
-	answerlink = models.ForeignKey(advert)
+	fk         = models.ForeignKey(advert)
 
 	def __unicode__(self):
 		return self.links
