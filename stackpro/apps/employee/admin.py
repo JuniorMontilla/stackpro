@@ -7,11 +7,11 @@ class answerinline(admin.TabularInline):
 class advertadmin(admin.ModelAdmin):
 	fieldsets = [
 					(None,
-					{'fields': ['status', 'avatar', 'titlefoemployee', 'company', 'website', 'salary', 'place', 'prove', 'descriptionofjob', 'pub_date']}),
+					{'fields': ['status', 'avatar', 'titleofemployee', 'company', 'website', 'salary', 'place', 'prove', 'descriptionofjob', 'pub_date']}),
 				]
-	list_display = ('titlefoemployee', 'company','salary', 'website', 'place','pub_date', 'status')
+	list_display = ('titleofemployee', 'company','salary', 'website', 'place','pub_date', 'status')
 	list_filter = ['company']
-	search_fields = ['company','titlefoemployee']
+	search_fields = ['company','titleofemployee']
 	date_hierarchy = 'pub_date'
 	inlines = [answerinline]
 

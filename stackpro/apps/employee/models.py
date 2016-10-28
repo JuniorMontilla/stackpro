@@ -6,11 +6,11 @@ class advert(models.Model):
 		mediaroute = 'MultimediaData/{0}/{1}'.format(self.company,filename)
 		return mediaroute 
 
-	status      	 = models.BooleanField() 
+	status      	 = models.BooleanField(blank=True) 
 	avatar      	 = models.ImageField(upload_to=avatarcompany, null=False,blank=False)
 	company     	 = models.CharField(max_length=100)
 	website     	 = models.CharField(max_length=100)
-	titlefoemployee  = models.CharField(max_length=200) 
+	titleofemployee  = models.CharField(max_length=200) 
 	place       	 = models.CharField(max_length=100)
 	salary      	 = models.PositiveIntegerField()
 	descriptionofjob = models.TextField(max_length=50000)	

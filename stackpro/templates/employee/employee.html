@@ -1,28 +1,13 @@
-{%  extends 'base.html' %}
+{%  extends 'basedos.html' %}
 {% block title %}
 {%  endblock %}
 {%  block content %}
 
 <form action="." method="POST" enctype="multipart/form-data"> 
 {% csrf_token %}
-<input type="file" name="avatar" placeholder="">
-{{form.avatar.errors}}
-<input type="text" name="company" placeholder="Nombre de la empresa">
-{{form.company.errors}}
-<input type="text" name ="website" placeholder="ej: http://kitdevelop.com">
-{{form.website.errors}}
-<input type="text"  name="titlefoemployee" placeholder="Titulo ej:Python backend developer">
-{{form.titleofemployee.errors}}
-<input  type ="text"  name="place" placeholder="Remoto, Santo Domingo">
-{{form.place.errors}}
-<input type="text"  name="salary" placeholder="salario >= US$700">
-{{form.salary.errors}}
-<textarea name="descriptionofjob" id="" cols="30" rows="10" placeholder="Descipcion del empleo, horario, vacaciones, seguro medico y demas condiciones detalladas"></textarea>
-{{form.descriptionofjob.errors}}
-<textarea name="prove" id="" cols="30" rows="10" placeholder="Descripcion de la prueba"></textarea>
-{{form.prove.errors}}
-<button type="submit"> Enviar </button>
-<br/><br/>
-<strong class="error">{{ message }}</strong>
+{{ form.as_p}}
+<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+<i class="icon-send"></i>
+</button>
 </form>
 {% endblock %}

@@ -1,0 +1,11 @@
+{%  extends 'basedos.html' %}
+{% block title %}{%  endblock %}
+{%  block content %}
+
+{% for elements in answerdata %}
+	<ul>
+		<li><a href="{{elements.links}}">{{elements.links}}</a> | {{elements.email}} </li>
+	</ul>
+{% endfor %}
+
+{% endblock%}

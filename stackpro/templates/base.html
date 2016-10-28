@@ -1,53 +1,200 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="/static/css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<title>{% block title %} {% endblock %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<title>Smile</title>
+	<link href="{% static "css/materialize.min.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static "css/style.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body>
-<!-- HEADER -->
-<header class="header">
-	<div class="container">
-		<div class="row">
-			<div class="kit-row left">
-			<a href="/employee">
-		 		<figure>
-		 			<img src="/static/images/logo.png">
-		 		</figure>
-		 	</a>
-		</div>
-		<div class="kit-menu">		
-		<nav class="menu">
-			<ul class="list">
-				<li class="item"><a  href="#"><i class=""></i>Reglas</a></li>
-				<li class="item"><a  href="#"><i class=""></i>Contactanos</a></li>
-			</ul>
+<body id="home" class="scrollspy">
+	<a href="#" id="back-to-top" title="Back to top"><i class="icon-keyboard_arrow_up"></i></a>
+	<div class="nav-height">
+		<nav class="white" role="navigation" id="home-navbar">
+			<div class="nav-wrapper container">
+				<h1><a id="logo-container" href="#home" class="anchor brand-logo">Smile<img src="{% static "images/logo.png" %}" alt="Smile"></a></h1>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="#about" class="anchor teal-text text-lighten-2">About</a></li>
+					<li><a href="#team" class="anchor teal-text text-lighten-2">Team</a></li>
+					<li><a href="#contact" class="anchor teal-text text-lighten-2">Contact</a></li>
+					<li><a href="{% url "url_work" %}" class="anchor teal-text text-lighten-2">new</a></li>
+					<li><a href="{% url "url_index" %}" class="anchor teal-text text-lighten-2">employees</a></li>
+				</ul>
+				<ul id="nav-mobile" class="side-nav">
+					<li><a href="#about" class="teal-text text-lighten-2">About</a></li>
+					<li><a href="#team" class="teal-text text-lighten-2">Team</a></li>
+					<li><a href="#contact" class="teal-text text-lighten-2">Contact</a></li>
+					<li><a href="{% url "url_work" %}" class="anchor teal-text text-lighten-2">new</a></li>
+					<li><a href="{% url "url_index" %}" class="anchor teal-text text-lighten-2">employees</a></li>
+				</ul>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
 		</nav>
-		</div>
+	</div>
+	<div class="slider-wrap">
+		<div class="slider">
+			<ul class="slides">
+				<li style="background-image:url(/static/images/slide1.jpg)">
+					<div class="caption center-align">
+						<h3>Early diagnosis!</h3>
+						<h5 class="light grey-text text-lighten-3">Mitigates the evil before it advances.</h5>
+					</div>
+				</li>
+				<li style="background-image:url(/static/images/slide2.png)">
+					<div class="caption left-align">
+						<h3>Follows his ADHD</h3>
+						<h5 class="light grey-text text-lighten-3">Follow your status and history.</h5>
+					</div>
+				</li>
+				<li style="background-image:url(/static/images/slide3.jpg)">
+					<div class="caption right-align">
+						<h3>Learning fun</h3>
+						<h5 class="light grey-text text-lighten-3">We make the game a way to learn.</h5>
+					</div>
+				</li>
+				<li style="background-image:url(/static/images/slide4.png)">
+					<div class="caption center-align">
+						<h3>Therapies and medications</h3>
+						<h5 class="light grey-text text-lighten-3">between therapies improves precicion.</h5>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
-</header>
-<!-- HEADER -->
-
-<section>
-	{%  block content %}
-
-	{% endblock %}
+	<div id="about" class="scrollspy">
+		<div class="container">
+			<div class="section">
+				<br><br><br>
+				<div class="row">
+					<div class="col s12 center">
+						<h3>About</h3>
+					
+						</p>
+					</div>
+				</div>
+				<br><br><br>
+			</div>
+		</div>
+	</div>
+	<section class="container">
 </section>
-<br/><br/>
-<center>&copy;Con el empuje de kitdevelop</center>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+	<div id="team" class="scrollspy">
+		<div class="parallax-container valign-wrapper">
+			<div class="section no-pad-bot">
+				<div class="container">
+					<div class="row center">
+						<h3 class="header col s12 light">Team</h3>
+					</div>
+				</div>
+			</div>
+			<div class="parallax"><img src="/static/images/background1.jpg" alt="..."></div>
+		</div>
+		<div class="container">
+			<div class="section">
+				<br><br><br>
+				<div class="row">
+					<div class="col s12 m4 center">
+						<div class="card-panel hoverable">
+							<img src="/static/images/junior.jpg" alt="Júnior Montilla" class="circle responsive-img">
+							<h5 class="center">Júnior Montilla</h5>
+							<a target="_blank" href="https://twitter.com/jmontilla_">@jmontilla_</a>
+							<p class="light">CEO</p>
+						</div>
+					</div>
+				
+				</div>
+				<br><br><br>
+			</div>
+		</div>
+	</div>
+	<div id="contact" class="scrollspy">
+		<div class="parallax-container valign-wrapper">
+			<div class="section no-pad-bot">
+				<div class="container">
+					<div class="row center">
+						<h3 class="header col s12 light">Contact</h3>
+					</div>
+				</div>
+			</div>
+			<div class="parallax"><img src="/static/images/background2.jpg" alt="..."></div>
+		</div>
+<div class="section">
+			<div class="container">
+				<br><br><br>
+				<div class="row">
+					<form action="." method="POST" class="col s12">
+					{% csrf_token %}
+						<div class="row">
+							<div class="input-field col s6">
+								<input id="first_name" type="text" name="first_name" class="validate">
+								<label for="first_name">First Name</label>
+							</div>
+							<div class="input-field col s6">
+								<input id="last_name" type="text" name="last_name" class="validate">
+								<label for="last_name">Last Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="email" type="email" name="email" class="validate">
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<textarea id="textarea1" class="materialize-textarea" name="texto" ></textarea>
+								<label for="textarea1">Textarea</label>
+							</div>
+						</div>
+						<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+							<i class="icon-send"></i>
+						</button>
+					</form> 
+				</div>
+				<br><br><br>
+			</div>
+		</div>
 
-</body>
+	<footer class="page-footer teal">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Who we are</h5>
+					<p class="grey-text text-lighten-4"></p>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Settings</h5>
+					<ul>
+						<li><a class="white-text" href="#!"><i class="icon-paypal"> </i>Donate</a></li>
+						<li><a class="white-text" href="#!"><i class="icon-blog"> </i>Blog</a></li>
+						<li><a class="white-text" href="#!"><i class="icon-feed2"> </i>RSS</a></li>
+						<li><a class="white-text" href="#!"><i class="icon-envelop"> </i>Newsletter</a></li>
+					</ul>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Connect</h5>
+					<ul>
+						<li><a class="white-text" href="#!"><i class="icon-twitter"> </i>Twitter</a></li>
+						<li><a class="white-text" href="https://www.facebook.com/pages/Smile/894301817278577?fref=ts"><i class="icon-facebook"> </i>Facebook</a></li>
+						<li><a class="white-text" href="#!"><i class="icon-instagram"> </i>Instagram</a></li>
+						<li><a class="white-text" href="#!"><i class="icon-youtube2"> </i>Youtube</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+			<a href="#" class="grey-text text-lighten-5"><strong>StackPro</strong></a> | Copyright © 2016
+			</div>
+		</div>
+	</footer>
+	<script src="{% static "js/jquery.min.js" %}"></script>
+	<script src="{% static "js/materialize.min.js" %}"></script>
+	<script src="{% static "js/init.js" %}"></script>
+	</body>
 </html>

@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<title>Smile</title>
+	<link href="{% static "css/materialize.min.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static "css/style.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<br><br>
+ 	<center>
+ 		<img src="/static/images/logo.png" alt="logo StackPro">
+ 	</center>
+	<section class="container main-container">
+		{% block content %}
+		{% endblock %}
+	</section>
+	<script src="{% static "js/jquery.min.js" %}"></script>
+	<script src="{% static "js/materialize.min.js" %}"></script>
+	<script src="{% static "js/init.js" %}"></script>
+</body>
+</html>

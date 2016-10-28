@@ -19,4 +19,5 @@ urlpatterns = patterns('stackpro.apps.employee.views',
               name='url_details'
               ),
             url(r'^work/','view_work',name='url_work'),
+            url(r'^answer/$','view_answer',name='url_answer'),
 )

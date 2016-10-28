@@ -1,27 +1,42 @@
-{%  extends 'base.html' %}
+{%  extends 'basedos.html' %}
 {% block title %}{%  endblock %}
 {%  block content %}
-{{advert}}
 <article class="company-info">
-	<h1>{{advert.titlefoemployee}}</h1>
-	<img src="/media/{{advert.avatar}}" alt="" width="200px" height="200px">
-	<h3>{{advert.company}}</h3>
-	<a href="{{advert.website }}">{{advert.website }}</a>
+	<h1>{{advert.titleofemployee}}</h1>
+	<img src="/media/{{advert.avatar}}" alt="">
+	<h4>{{advert.company}}</h4>
+	<a href="http://{{advert.website }}">{{advert.website }}</a>
 </article>
-<h3 class="headers"> Lugar y Beneficios </h3>
+<h4> Lugar y Beneficios: </h4>
 <article class="place">{{advert.place }} <i class="icon-location"></i></article>
-<article class="money">US${{advert.salary }} <i class="icon-coin"></i></article>
+<article class="salary">US${{advert.salary }} <i class="icon-coin"></i></article>
 <br/><br/>
-<h3 class="headers"> Detalles del empleo </h3>
-<article class =  >{{advert.descriptionofjob | safe}}</article>
-<h3 class="headers"> Prueba </h3>
-<article class =  >{{advert.prove | safe }}</article>
+<h4> Detalles del empleo: </h4>
+<article>{{advert.descriptionofjob | safe}}</article>
+<h4> Prueba: </h4>
+<article>{{advert.prove | safe }}</article>
 
-<form action="."  method="POST">
+<br><br>
+<a href="{% url "url_answer"%}">
+<button class="btn waves-effect waves-light" type="submit" name="action">Respuestas
+<i class="icon-send"></i>
+</button>
+</a>
+<hr>
+<br><br>
+
+<section class="aplication-form">
+<h3>Formulario de aplicacion</h3>
+<form  action="{% url "url_answer"%}"  method="POST">
 {% csrf_token %}
 <input type="text" name="links" placeholder="Elace a github o bitbucket">
 <input type="text" name="email" placeholder="Email">
-<button  type="submit">Enviar</button>
+
+<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+<i class="icon-send"></i>
+</button>
 </form>
+</section>
+<br><br>
 {{message}}
 {% endblock %}
